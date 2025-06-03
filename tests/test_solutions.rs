@@ -1,6 +1,6 @@
-use cryptopals_rs::hello_world;
+use cryptopals_rs::set_1::challenge_1;
 
 #[test]
 fn test_challenge_1() {
-    assert_eq!(hello_world(), "Hello, world!");
+    assert_eq!(challenge_1::greet(), "Hello again, world!");
 }
