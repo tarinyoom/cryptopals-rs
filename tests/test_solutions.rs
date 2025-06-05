@@ -1,5 +1,6 @@
 use cryptopals_rs::set_1::challenge_1;
 use cryptopals_rs::set_1::challenge_2;
+use cryptopals_rs::set_1::challenge_3;
 
 #[test]
 fn test_challenge_1() {
@@ -18,6 +19,16 @@ fn test_challenge_2() {
     let expected_output = "746865206b696420646f6e277420706c6179";
     assert_eq!(
         challenge_2::combine(input1.to_string(), input2.to_string()).unwrap(),
+        expected_output.to_string()
+    );
+}
+
+#[test]
+fn test_challenge_3() {
+    let input1 = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736";
+    let expected_output = "Cooking MC's like a pound of bacon";
+    assert_eq!(
+        challenge_3::decode(input1).unwrap(),
         expected_output.to_string()
     );
 }
