@@ -36,7 +36,7 @@ pub fn decode(s: &str) -> Result<String, String> {
         .as_bytes()
         .iter()
         .map(|c| char_to_hex(c))
-        .collect::<Result<Vec<u8>, String>>()?; // Do this first
+        .collect::<Result<Vec<u8>, String>>()?;
 
     let decoded_bytes: Vec<u8> = hex_bytes
         .chunks(2)
