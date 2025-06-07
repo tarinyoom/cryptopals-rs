@@ -1,6 +1,7 @@
 use cryptopals_rs::set_1::challenge_1;
 use cryptopals_rs::set_1::challenge_2;
 use cryptopals_rs::set_1::challenge_3;
+use cryptopals_rs::set_1::challenge_4;
 
 #[test]
 fn test_challenge_1() {
@@ -29,6 +30,16 @@ fn test_challenge_3() {
     let expected_output = "Cooking MC's like a pound of bacon";
     assert_eq!(
         challenge_3::decode(input1).unwrap(),
+        expected_output.to_string()
+    );
+}
+
+#[test]
+fn test_challenge_4() {
+    let input = include_str!("challenge_4.txt");
+    let expected_output = "Now that the party is jumping\n";
+    assert_eq!(
+        challenge_4::decode(input).unwrap(),
         expected_output.to_string()
     );
 }
